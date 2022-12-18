@@ -18,8 +18,8 @@ xcopy %ERSCRIPTHOME%\examplesConceptual\docs %outputfolder%\svg\ /q /y
 echo "copy .htaccess.txt"
 copy %filepath%.htaccess.txt %outputfolder%\.htaccess.txt
 
-java -jar %SAXON_PATH%\saxon9he.jar -s:"%filepath%%filenamebase%.xml" -xsl:%DOCHOME%\xslt\documentERmodel.elaboration.xslt -o:temp\%filenamebase%.elaborated.xml
+java -jar %SAXON_JAR% -s:"%filepath%%filenamebase%.xml" -xsl:%DOCHOME%\xslt\documentERmodel.elaboration.xslt -o:temp\%filenamebase%.elaborated.xml
 
-java -jar %SAXON_PATH%\saxon9he.jar -s:temp\%filenamebase%.elaborated.xml -xsl:%DOCHOME%\xslt\documentERmodel.complete.xslt -o:temp\%filenamebase%.completed.xml
+java -jar %SAXON_JAR% -s:temp\%filenamebase%.elaborated.xml -xsl:%DOCHOME%\xslt\documentERmodel.complete.xslt -o:temp\%filenamebase%.completed.xml
 
 java -jar %JING_PATH%\jing.jar -f %DOCHOME%\schemas\documentERmodel.rng temp\%filenamebase%.completed.xml

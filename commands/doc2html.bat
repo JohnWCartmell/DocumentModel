@@ -39,5 +39,5 @@ copy %DOCHOME%\docs\print.css %outputfolder%\print.css
 copy %DOCHOME%\docs\printmenustyles.css %outputfolder%\printmenustyles.css
 
 
-java -jar %SAXON_PATH%\saxon9he.jar -s:"%filepath%%filenamebase%.xml" -xsl:%DOCHOME%\xslt\document2.html.xslt -o:%filenamebase%.html rootfolder=%outputfolder%
+java -jar %SAXON_JAR% -s:"%filepath%%filenamebase%.xml" -xsl:%DOCHOME%\xslt\document2.html.xslt -o:%filenamebase%.html rootfolder=%outputfolder%
 

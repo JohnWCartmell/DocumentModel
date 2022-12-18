@@ -1,7 +1,7 @@
 
 echo off
 
-set ERSCRIPT=ERScript_r3_putative
+set ERSCRIPT=ERScript_r5
 
 set DOCSRC=%~dp0..
  

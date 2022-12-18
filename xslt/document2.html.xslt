@@ -104,13 +104,25 @@
     <xsl:result-document href="{$filepath}">
       <html>
         <head>
+          
+          <!-- Google tag (gtag.js) -->
+          <script src="https://www.googletagmanager.com/gtag/js?id=G-732VLCP0ME">
+            <xsl:attribute name="async" select="true()"/>
+          </script>
+          <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-732VLCP0ME');
+          </script>
+
           <link href='https://fonts.googleapis.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'/>
           <link rel="stylesheet" type="text/css" href="{concat($pathtoroot,'/erstyle.css')}" media="screen" />
           <link rel="stylesheet" type="text/css" href="{concat($pathtoroot,'/cssmenustyles.css')}"   media="screen" />
           <link rel="stylesheet" type="text/css" href="{concat($pathtoroot,'/print.css')}"           media="print" />
           <link rel="stylesheet" type="text/css" href="{concat($pathtoroot,'/printmenustyles.css')}" media="print" />
-          
-          
+                  
           <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"/>
           <script src="{concat($pathtoroot,'/script.js')}"/>
           <script>
@@ -121,7 +133,6 @@
 
             ga('create', 'UA-30358501-3', 'auto');
             ga('send', 'pageview');
-
           </script>
           <style>
             ul#<xsl:value-of select="ancestor-or-self::chapter/label"/> {display: block !important ;}

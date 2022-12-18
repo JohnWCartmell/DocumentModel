@@ -627,7 +627,12 @@
           <below>solidcircle</below>
         </presentation>
       </entity_type>
-
+      <entity_type>
+        <name>circ</name>
+        <presentation>
+          <below>hollowcircle</below>
+        </presentation>
+      </entity_type>
 
       <entity_type>
         <name>CompositeMinorElement</name>
